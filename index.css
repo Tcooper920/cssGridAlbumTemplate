@@ -118,9 +118,12 @@ border-radius: 5px;
 }
 
 footer {
+    display: flex;
+    padding: 3rem 1rem 3rem 1rem;
     background: #212121;
-    height: 10rem;
+    justify-content: center;
     margin-top: 3rem;
+    color: gray;
 }
 
 /* MEDIA QUERIES ***************************************************************/
