@@ -8,17 +8,6 @@ body {
     font-family: 'Hind', sans-serif;
 }
 
-.header-wrapper {
-    padding: 2rem 1rem 0.5rem 1rem;
-}
-
-.header {
-    max-width: 65rem;
-    margin: 0 auto;
-    padding-bottom: .5rem;
-    border-bottom: 1px solid #dadada;
-}
-
 h1 {
     color: #505050;
     font-size: 2rem;
@@ -37,6 +26,57 @@ h3 {
 
 p {
     font-size: .8rem;
+}
+
+#mobile-nav-hamburger {
+  display: none;
+}
+
+nav {
+  margin: 0rem 0 1rem 0;
+  box-shadow: 0px 3px 7px 0px rgb(119 119 119 / 13%);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+nav ul li a:hover {
+  opacity: .5;
+  cursor: pointer;
+  transition: .5s opacity;
+}
+
+nav a {
+  color: gray;
+  text-decoration: none;
+}
+
+.selected-nav-item {
+  color: black;
+}
+
+.selected-nav-item:hover {
+  opacity: 1;
+}
+
+.header-wrapper {
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.header {
+    max-width: 65rem;
+    margin: 0 auto;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #dadada;
 }
 
 main {
@@ -127,6 +167,7 @@ footer {
 }
 
 /* MEDIA QUERIES ***************************************************************/
+
 @media screen and (max-width:820px) {
     main {
         height: 80rem;
@@ -136,6 +177,69 @@ footer {
                              "box-4 box-5 box-6"
                              "box-7 . .";
     }
+}
+
+@media screen and (max-width:700px) {
+    #mobile-nav-hamburger {
+    flex-direction: row;
+    top: 0;
+    display: inline-flex;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    font-size: 2rem;
+    justify-content: flex-end;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 3px 7px 0px rgba(119, 119, 119, 0.13);
+  }
+
+  #hamburger-icon {
+    flex: 1;
+    margin-right: .5rem;
+    cursor: pointer;
+    text-align: right;
+  }
+
+  nav {
+    margin: 0;
+    margin-top: 2.7rem;
+    position: fixed;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    transition: padding-bottom .6s ease;
+    -moz-transition: padding-bottom .6s ease;
+    -webkit-transition: padding-bottom .6s ease;
+    -o-transition: padding-bottom .6s ease;
+    -ms-transition: padding-bottom .6s ease;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: #212121;
+  }
+
+  nav ul li {
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
+    padding: 0;
+  }
+
+  nav a {
+    color: gray;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .selected-nav-item {
+    color: white;
+  }
+
+  .header-wrapper {
+    padding-top: 5rem;
+  }
 }
 
 @media screen and (max-width:600px) {
